@@ -1,0 +1,17 @@
+package mypackage
+
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkConf
+import scala.io.Source
+
+
+object Percentile {
+  def main(args: Array[String]): Unit = {
+    val spConfig = (new SparkConf).setAppName("Spark Matrix Multiplication").setMaster("local[*]");
+    val sc = new SparkContext(spConfig);
+    val listOfLines = Source.fromFile("input_list.txt").getLines.toList;
+    val ls = listOfLines.map(_.toInt);
+    val list = sc.textFile("input_list.txt");
+    sc.stop();
+  }
+}

@@ -1,0 +1,2 @@
+INDEX VERSION 1.130+D:\Semester 7\Scalable Data Mining\Assignment 2\.metadata\.plugins\org.eclipse.jdt.core
+1483671490.index

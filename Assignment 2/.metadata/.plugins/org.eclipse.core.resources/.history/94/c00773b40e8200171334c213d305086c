@@ -1,0 +1,20 @@
+package mypackage
+
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkConf
+import scala.io.Source
+
+
+object Percentile {
+  def main(args: Array[String]): Unit = {
+    
+    val spConfig = (new SparkConf).setAppName("Spark Matrix Multiplication").setMaster("local[*]");
+    val sc = new SparkContext(spConfig);
+    val listOfLines = Source.fromFile("input_list.txt").getLines.toArray;
+    val ls = listOfLines.map(_.toInt);
+    
+    val list = sc.parallelize(ls, 3).cache();
+    val sortedList = list.sortBy(x => x).zipWithIndex().filter(x => x._2 == .25*list.count()).collect().foreach(println);
+    sc.stop();
+  }
+}

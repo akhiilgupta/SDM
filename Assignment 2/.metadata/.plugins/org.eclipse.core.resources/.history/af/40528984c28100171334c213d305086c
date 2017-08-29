@@ -1,0 +1,30 @@
+package matrixMulti
+
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkConf
+
+import org.apache.spark.mllib.linalg.{Vector, Vectors}
+import org.apache.spark.mllib.linalg.{Matrix, Matrices}
+import org.apache.spark.rdd.RDD
+import org.apache.spark.mllib.linalg.Vector
+import org.apache.spark.mllib.linalg.distributed.RowMatrix
+import org.apache.spark.mllib.linalg.Matrix
+import org.apache.spark.mllib.linalg.distributed.{CoordinateMatrix, MatrixEntry}
+
+object MatrixMultiplication {
+  def main(args: Array[String]): Unit = {
+    val spConfig = (new SparkConf).setAppName("Spark COO Sparse Matrix").setMaster("local[*]");
+    val sc = new SparkContext(spConfig);
+    
+    val matrixCom = sc.textFile("input_matrices.txt", 3).map(line => line.split(","));
+    val matrixA = matrixCom.filter(elem => elem(0) == "A").map(elem => (elem(2).toInt, (elem(1).toInt, elem(3).toInt)));
+    val matrixB = matrixCom.filter(elem => elem(0) == "B").map(elem => (elem(1).toInt, (elem(2).toInt, elem(3).toInt))).collect().foreach(println);
+    
+    //val matrixC = matrixA.join(matrixB).map(elem => ((elem._2._1._1, elem._2._2._1) -> elem._2._1._2*elem._2._2._2));
+    
+    //val reducedC = matrixC.reduceBykey(_+_);
+    
+    sc.stop();
+    
+  }
+}

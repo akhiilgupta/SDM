@@ -1,0 +1,25 @@
+package mypackage
+
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkConf
+import scala.io.Source
+import org.apache.spark.rdd.RDD
+
+
+object Percentile {
+  def main(args: Array[String]): Unit = {
+    def findPercentile(data: RDD[Int], percentile: Int): Int = {
+      return 0
+    }
+    
+    val spConfig = (new SparkConf).setAppName("Spark Matrix Multiplication").setMaster("local[*]");
+    val sc = new SparkContext(spConfig);
+    val listOfLines = Source.fromFile("input_list.txt").getLines.toArray;
+    val ls = listOfLines.map(_.toInt);
+    
+    val list = sc.parallelize(ls, 3);//.collect().foreach(print);
+    
+    
+    sc.stop();
+  }
+}
