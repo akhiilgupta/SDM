@@ -1,0 +1,7 @@
+package mypackage
+
+object FriendsReco {
+  def main(args: Array[String]): Unit = {
+    
+  }
+}

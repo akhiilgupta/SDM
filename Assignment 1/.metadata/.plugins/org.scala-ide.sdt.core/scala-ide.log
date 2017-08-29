@@ -1,0 +1,152 @@
+2017-08-15 07:11:34,706  WARN [ModalContext] - ScalaProject - Project Friends-Recommendation has platform default sourceLevel.
+2017-08-15 07:11:34,709  WARN [ModalContext] - ScalaProject - Project Friends-Recommendation runs on platform default installation.
+2017-08-15 07:11:36,533  WARN [Worker-0] - ScalaProject - Project Friends-Recommendation has platform default sourceLevel.
+2017-08-15 07:11:36,534  WARN [Worker-0] - ScalaProject - Project Friends-Recommendation runs on platform default installation.
+2017-08-15 07:11:36,884 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Error in Scala compiler
+java.lang.NullPointerException
+	at org.scalaide.core.internal.builder.zinc.SbtInputs.$anonfun$classpath$1(SbtInputs.scala:83)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:234)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:52)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:234)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:227)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at org.scalaide.core.internal.builder.zinc.SbtInputs.classpath(SbtInputs.scala:82)
+	at org.scalaide.core.internal.builder.zinc.CachingCompiler.compile(CachingCompiler.scala:52)
+	at org.scalaide.core.internal.builder.zinc.EclipseSbtBuildManager.aggressiveCompile(EclipseSbtBuildManager.scala:213)
+	at org.scalaide.core.internal.builder.zinc.EclipseSbtBuildManager.runCompiler(EclipseSbtBuildManager.scala:146)
+	at org.scalaide.core.internal.builder.zinc.EclipseSbtBuildManager.update(EclipseSbtBuildManager.scala:128)
+	at org.scalaide.core.internal.builder.zinc.EclipseSbtBuildManager.build(EclipseSbtBuildManager.scala:84)
+	at org.scalaide.core.internal.project.scopes.BuildScopeUnit.build(BuildScopeUnit.scala:72)
+	at org.scalaide.core.internal.project.SbtScopesBuildManager.$anonfun$build$3(SbtScopesBuildManager.scala:53)
+	at org.scalaide.core.internal.project.SbtScopesBuildManager.$anonfun$build$3$adapted(SbtScopesBuildManager.scala:50)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalaide.core.internal.project.SbtScopesBuildManager.build(SbtScopesBuildManager.scala:50)
+	at org.scalaide.core.internal.project.ScalaProject.build(ScalaProject.scala:596)
+	at org.scalaide.core.internal.builder.ScalaBuilder.build(ScalaBuilder.scala:111)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+2017-08-15 07:12:20,489  WARN [ModalContext] - ScalaProject - Project Friends-Recommendation has platform default sourceLevel.
+2017-08-15 07:12:20,489  WARN [ModalContext] - ScalaProject - Project Friends-Recommendation runs on platform default installation.
+2017-08-15 07:12:21,140  WARN [Worker-2] - ScalaProject - Project Friends-Recommendation has platform default sourceLevel.
+2017-08-15 07:12:21,140  WARN [Worker-2] - ScalaProject - Project Friends-Recommendation runs on platform default installation.
+2017-08-15 07:12:50,587  WARN [Worker-3] - ScalaProject - Project Friends-Recommendation has platform default sourceLevel.
+2017-08-15 07:12:50,587  WARN [Worker-3] - ScalaProject - Project Friends-Recommendation runs on platform default installation.
+2017-08-15 07:13:00,784  WARN [main] - ScalaProject - Project Friends-Recommendation has platform default sourceLevel.
+2017-08-15 07:13:00,784  WARN [main] - ScalaProject - Project Friends-Recommendation runs on platform default installation.
+2017-08-15 07:13:06,535  WARN [Worker-1] - ScalaProject - Project Friends-Recommendation has platform default sourceLevel.
+2017-08-15 07:13:06,536  WARN [Worker-1] - ScalaProject - Project Friends-Recommendation runs on platform default installation.
+2017-08-15 07:13:06,895  WARN [Java indexing] - ScalaProject - Project Friends-Recommendation has platform default sourceLevel.
+2017-08-15 07:13:06,895  WARN [Java indexing] - ScalaProject - Project Friends-Recommendation runs on platform default installation.
+2017-08-15 07:13:11,849  WARN [Worker-2] - ScalaProject - Project Friends-Recommendation has platform default sourceLevel.
+2017-08-15 07:13:11,849  WARN [Worker-2] - ScalaProject - Project Friends-Recommendation runs on platform default installation.
+2017-08-15 07:14:19,977  WARN [Worker-5] - ScalaProject - Project Friends-Recommendation has platform default sourceLevel.
+2017-08-15 07:14:19,977  WARN [Worker-5] - ScalaProject - Project Friends-Recommendation runs on platform default installation.
+2017-08-15 07:15:50,143  WARN [Worker-2] - ScalaProject - Project Friends-Recommendation has platform default sourceLevel.
+2017-08-15 07:15:50,143  WARN [Worker-2] - ScalaProject - Project Friends-Recommendation runs on platform default installation.
+2017-08-15 07:16:19,649  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.sourceLevel was uninitialized for Friends-Recommendation, setting default to 2.12.
+2017-08-15 07:16:28,909 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - java.lang.IllegalArgumentException: Argument not valid
+2017-08-15 07:16:32,064  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-15 07:17:19,216 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:17:19,216 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:17:23,103  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-15 07:17:23,318  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-15 07:17:24,626  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-15 07:17:24,846  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-15 07:17:52,829  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-15 07:18:17,140  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-15 07:19:37,932 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,932 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,933 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,933 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,933 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,933 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,933 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,933 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,933 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,934 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,934 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,934 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,934 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,934 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,934 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,934 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,934 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,934 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,934 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,934 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,935 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,935 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,935 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,935 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,935 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,935 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,935 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,935 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,935 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,935 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,935 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,935 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,936 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,936 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,936 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,936 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,936 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,936 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,936 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,936 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:37,936 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:19:42,185  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-15 07:19:42,544  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-15 07:21:47,844  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-15 07:21:48,046  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-15 07:46:32,407 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:46:32,408 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:46:32,408 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 07:50:47,789  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-15 07:50:50,698  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-15 15:08:06,304 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 15:08:06,305 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 15:08:06,305 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-15 15:26:05,612  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-15 15:26:05,839  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-15 15:28:26,938  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-15 15:28:28,901  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:15:04,057 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-17 01:15:04,214 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-17 01:15:04,214 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-17 01:15:04,232  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:15:04,433  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:15:09,346  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:15:09,732  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:15:09,934  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:15:17,308 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-17 01:15:17,333 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-17 01:15:17,333 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-17 01:15:17,333 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-17 01:15:21,535  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:15:23,258  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:24:46,788  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:26:25,626  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:26:25,826  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:26:32,175  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:26:32,376  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:28:15,285  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:28:15,490  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:46:42,590  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:47:25,785  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 01:47:25,986  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-08-17 04:13:49,500 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-17 04:13:49,502 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-08-17 04:13:49,502 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
