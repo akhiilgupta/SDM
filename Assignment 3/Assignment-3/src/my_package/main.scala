@@ -12,9 +12,9 @@ object main {
     val conf = new SparkConf().setAppName("Friends Reco").setMaster("local[*]");
     val sc = new SparkContext(conf);
     
-    implicit val codec = Codec("UTF-8")
-    codec.onMalformedInput(CodingErrorAction.REPLACE)
-    codec.onUnmappableCharacter(CodingErrorAction.REPLACE)
+    implicit val codec = Codec("UTF-8");
+    codec.onMalformedInput(CodingErrorAction.REPLACE);
+    codec.onUnmappableCharacter(CodingErrorAction.REPLACE);
     
     val raw_data = Source.fromFile("Data.txt")(codec).getLines().drop(1).mkString.trim;
     val para = raw_data.split("(?=\\t\\d{1,3}\\t)").map(lines => lines.trim.toLowerCase())
@@ -23,7 +23,11 @@ object main {
     
     val para_indexed = para.toIndexedSeq.zipWithIndex;
     
-    val lsh = new LSH(5, para_indexed, sc);
+    val lsh1 = new LSHash(5, 500, 10, para_indexed, .005);
+    lsh1.createHash();
+    val similar_doc = lsh1.findSimilar(para(0));
+    
+    similar_doc.foreach(ele => print(ele+" "));
     
   }
 }
