@@ -1,35 +1,24 @@
 package my_package
 
-import org.apache.spark.mllib.clustering.{KMeans, KMeansModel}
-import org.apache.spark.{SparkConf, SparkContext}
+import org.apache.spark.mllib.clustering.PowerIterationClustering
 import org.apache.spark.rdd.RDD
-import org.apache.spark.mllib.linalg.Vectors
-import shapeless.LowPriority.For
+import org.apache.spark.SparkContext
+import java.io._
 
-class BookCluster(data: Seq[Seq[Double]], num_clusters: Int, num_iteration: Int){
-  def kmeansFunction(sc:SparkContext):Unit = {    
-    
-    val rdd = sc.parallelize(data);
-    val vec = rdd.map(row => Vectors.dense(row.toArray));
-    val x_clusters = KMeans.train(vec, 2, 5);
-    val n_wsse = x_clusters.computeCost(vec);
-    
-    //x_clusters.clusterCenters.foreach(println);
-    
-    val l_cluster_assignment = x_clusters.predict(vec);
-    
-    l_cluster_assignment.collect.foreach(print);
-    
-    val book1 = l_cluster_assignment.zipWithIndex.filter(elem => elem._1 != 1).map(x => x._2).collect.mkString(",");
-    val book2 = l_cluster_assignment.zipWithIndex.filter(elem => elem._1 == 1).map(x => x._2).collect.mkString(",")
-    
-    val string1 = "Book1: "+book1;
-    val string2 = "Book2: "+book2;
-    
-    val string = string1+ "\\n"+string2;
-    
-    sc.parallelize(string, 1).saveAsTextFile("output")
-    
-    sc.stop();
-  }
+class BookCluster(data: RDD[(Long, Long, Double)], num_clusters: Int, n_iteration: Int, sc: SparkContext){
+  val model = new PowerIterationClustering()
+  .setK(num_clusters).setMaxIterations(n_iteration).setInitializationMode("degree").run(data);
+
+  val clusters = model.assignments.collect().groupBy(_.cluster).mapValues(_.map(_.id));
+  val assignments = clusters.toList.sortBy { case (k, v) => v.length }.map(ele => (ele._1+1, ele._2.map(e => e+1)));
+  val assignmentsStr = "Book"+assignments.map { case (k, v) => s"$k: ${v.sorted.mkString(",")}"}.mkString("\nBook");
+  val sizesStr = "\nCluster Sizes"+assignments.map {_._2.length}.sorted.mkString("(", ",", ")");
+  
+  val pw = new PrintWriter(new File("output_ques_1.txt"));
+  pw.write(assignmentsStr.concat(sizesStr));
+  pw.close;
+  
+  //sc.parallelize(assignmentsStr.concat(sizesStr), 1).saveAsTextFile("output_ques_1");
+  
+  //println(s"Books: $assignmentsStr cluster sizes: $sizesStr");
 }
