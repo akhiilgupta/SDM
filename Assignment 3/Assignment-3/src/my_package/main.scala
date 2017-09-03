@@ -23,11 +23,12 @@ object main {
     
     val para_indexed = para.toIndexedSeq.zipWithIndex;
     
-    val lsh1 = new LSHash(5, 500, 10, para_indexed, .005);
-    lsh1.createHash();
-    val similar_doc = lsh1.findSimilar(para(0));
+    val lsh = new LSHash(5, 120, 60, para_indexed, 0.1);
+    lsh.createHash();
+    val similar_doc = para_indexed.map(p => (lsh.findSimilar(p._1).toArray, p._2)).flatMap{ ele => ele._1.map(e => (ele._2, e._1, e._2)) }
+    .filter(ele => ele._1 == ele._2);
     
-    similar_doc.foreach(ele => print(ele+" "));
-    
-  }
+    //similar_doc.foreach(ele => println("("+ele._1+","+ele._2+","+ele._3+")"));
+    sc.parallelize(similar_doc, 3).saveAsTextFile("test");
+    }
 }

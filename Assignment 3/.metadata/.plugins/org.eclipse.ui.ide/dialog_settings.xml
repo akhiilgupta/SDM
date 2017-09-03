@@ -25,4 +25,12 @@
 		<item value="org.scala.tools.eclipse.search.feature:0.6.0.v-2_12-201706090920-bba3114"/>
 		<item value="org.scalaide.worksheet.feature:0.7.0.v-2_12-201706090917-9b473a6"/>
 	</list>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="381" key="DIALOG_X_ORIGIN"/>
+		<item value="98" key="DIALOG_Y_ORIGIN"/>
+	</section>
 </section>
