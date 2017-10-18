@@ -1,0 +1,25 @@
+package matrixMulti
+
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkConf
+
+class pageRank {
+  val spConfig = (new SparkConf).setAppName("Spark Matrix Multiplication").setMaster("local[*]");
+  val sc = new SparkContext(spConfig);
+  
+  val ra = Array[(String, Int)]();
+  val li = Array[(String, Array[String])]()
+  
+  var ranks = sc.parallelize(ra, 2);
+  val links = sc.parallelize(li, 2);
+  
+  for (i <- 1 to 100) {
+      val contribs = links.join(ranks).values.flatMap{ case (urls, rank) =>
+        val size = urls.size
+        urls.map(url => (url, rank / size))
+      }
+      ranks = contribs//.//
+      
+      //reduceByKey(_ + _).mapValues(0.15 + 0.85)
+    }
+}

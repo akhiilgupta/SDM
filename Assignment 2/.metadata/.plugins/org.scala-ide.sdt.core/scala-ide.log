@@ -1335,3 +1335,7 @@ java.util.NoSuchElementException: key not found: org/apache/spark/mllib/linalg/B
 2017-08-16 05:16:14,692 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
 2017-08-16 05:16:14,692 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
 2017-08-16 05:16:14,692 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-09-24 14:38:25,430 ERROR [Worker-2] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.jgit.util.FS).
+2017-09-24 14:38:25,446 ERROR [Worker-2] - System.err - log4j:WARN Please initialize the log4j system properly.
+2017-09-24 16:47:48,854 ERROR [Worker-0] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.jgit.util.FS).
+2017-09-24 16:47:48,870 ERROR [Worker-0] - System.err - log4j:WARN Please initialize the log4j system properly.

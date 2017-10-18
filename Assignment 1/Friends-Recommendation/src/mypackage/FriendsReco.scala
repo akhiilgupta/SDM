@@ -11,10 +11,10 @@ object FriendsReco {
    System.setProperty("hadoop.home.dir", "C:\\hadoop");
    val conf = new SparkConf().setAppName("Friends Reco").setMaster("local[*]");
    val sc = new SparkContext(conf);
-   val rawData = sc.textFile("FriendData.txt", 8);
+   val rawData = sc.textFile("FriendData.txt", 4);
    
    val Friends_Pair = rawData.map(line=>line.split("\\t")).filter(line => (line.size == 2)).
-     map(line=>(line(0),line(1).split(","))).flatMap(x=>x._2.flatMap(z=>Array((x._1.toInt,z.toInt))));
+     map(line=>(line(0),line(1).split(","))).flatMap(x=>x._2.flatMap(z=>Array((x._1.toInt,z.toInt)))).cache();
    
    val Self_Join = Friends_Pair.join(Friends_Pair);
    
@@ -29,7 +29,7 @@ object FriendsReco {
    
    val Reco = Recommendation.map(triplet => triplet._1.toString + "\t" + triplet._2.mkString(",") + "\n")
        .collect().mkString(",");
-   
+  
    sc.parallelize(Reco).saveAsTextFile("FriendsReco");
    sc.stop();
   }
